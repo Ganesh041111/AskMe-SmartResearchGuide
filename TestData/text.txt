@@ -1,0 +1,11 @@
+Machine learning involves showing a large volume of data to a machine so that it can learn and make predictions, find patterns, or classify data. The three machine learning types are supervised, unsupervised, and reinforcement learning.
+Supervised learning
+Gartner, a business consulting firm, predicts that supervised learning will remain the most utilized machine learning among enterprise information technology leaders in 2022 [2]. This type of machine learning feeds historical input and output data in machine learning algorithms, with processing in between each input/output pair that allows the algorithm to shift the model to create outputs as closely aligned with the desired result as possible. Common algorithms used during supervised learning include neural networks, decision trees, linear regression, and support vector machines.
+
+This machine learning type got its name because the machine is supervised while it's learning, which means that you’re feeding the algorithm information to help it learn. The outcome you provide the machine is labeled data, and the rest of the information you give is used as input features. 
+
+For example, if you were trying to learn about the relationships between loan defaults and borrower information, you might provide the machine with 500 cases of customers who defaulted on their loans and another 500 who didn't. The labeled data supervises the machine to figure out the information you're looking for.
+
+While supervised learning requires users to help the machine learn, unsupervised learning doesn't use the same labeled training sets and data. Instead, the machine looks for less obvious patterns in the data. This machine learning type is very helpful when you need to identify patterns and use data to make decisions. Common algorithms used in unsupervised learning include Hidden Markov models, k-means, hierarchical clustering, and Gaussian mixture models.
+
+Using the example from supervised learning, let's say you didn't know which customers did or didn't default on loans. Instead, you'd provide the machine with borrower information and it would look for patterns between borrowers before grouping them into several clusters.
