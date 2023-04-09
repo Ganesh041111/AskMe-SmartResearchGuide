@@ -45,7 +45,7 @@ with col2:
 import requests
 
 API_URL = "https://api-inference.huggingface.co/models/google/tapas-base-finetuned-wtq"
-headers = {"Authorization": "Bearer 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"}
+headers = {"Authorization": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"}
 
 # response="hhh"
 def query(payload):

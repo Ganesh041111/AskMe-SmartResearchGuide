@@ -64,7 +64,7 @@ if variable_names and pdf_file is not None:
     import requests
 
     API_URL = "https://api-inference.huggingface.co/models/facebook/bart-large-cnn"
-    headers = {"Authorization": "Bearer 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"}
+    headers = {"Authorization": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx"}
 
     def query(payload):
         response = requests.post(API_URL, headers=headers, json=payload)

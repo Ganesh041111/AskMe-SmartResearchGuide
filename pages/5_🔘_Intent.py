@@ -20,7 +20,7 @@ with col2:
    st.write("2. Click on 'Find Intent'.")
 
 
-openai.api_key ='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'
+openai.api_key ='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 prompt=st.text_input("Insert text here")
 button = st.button("Find Intent")

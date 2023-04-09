@@ -4,7 +4,7 @@ from PyPDF2 import PdfReader
 import requests
 
 API_URL = "https://api-inference.huggingface.co/models/GaneshShingre/autotrain-ask-me-40630105428"
-headers = {"Authorization": "Bearer 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"}
+headers = {"Authorization": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"}
 
 tab1, tab2, tab3 = st.tabs(["Text-Based", "Document-Based", "Video-Based"])
 
