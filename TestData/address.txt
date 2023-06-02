@@ -1,0 +1,11 @@
+semantic search
+G:\sem 8\Trash-Project\MP
+
+Dataset explore
+G:\sem 8\Trash-Project\datasets
+
+To implement this algorithm we need more processors and at least 32 GB RAM
+
+The blog website should be equipped with "recently visited" section
+
+we need to redesign the schema for the database for login page

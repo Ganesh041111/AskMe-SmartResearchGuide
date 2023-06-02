@@ -4,7 +4,7 @@ from PyPDF2 import PdfReader
 import requests
 
 API_URL = "https://api-inference.huggingface.co/models/GaneshShingre/autotrain-ask-me-40630105428"
-headers = {"Authorization": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"}
+headers = {"Authorization": "XXXXXXXXXXXXXXXXXXXXX"}
 
 tab1, tab2, tab3 = st.tabs(["Text-Based", "Document-Based", "Video-Based"])
 
@@ -42,6 +42,16 @@ with tab1:
 		            "context": articles
 	                },
                     })
+            
+            if output == "{'error': 'Model GaneshShingre/autotrain-ask-me-40630105428 is currently loading', 'estimated_time': 20.0}":
+                st.success("Loading...")
+                output = query({
+	                 "inputs": {
+		            "question": quest,
+		            "context": articles
+	                },
+                    })
+            print(output)
             st.success(output)
             st.write("Answer for the question is: ",output["answer"])
 
@@ -141,5 +151,6 @@ with tab3:
 		            "context": result
 	                },
                     })
+        
         st.success(output)
         st.write("Answer for the question is: ",output["answer"])

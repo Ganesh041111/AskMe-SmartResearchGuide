@@ -23,16 +23,14 @@ with col1:
 
 with col2:
    st.header("How to use: ")
-   st.write("1. Insert the text")
-   st.write("2. Click on 'Find Intent'.")
+   st.write("1. Insert path of directory")
+   st.write("2. Enter the query.")
+   st.write("3. Click on 'Search'.")
 
 
 pdf_dir = st.text_input("Path of directory")
 query = st.text_input("Enter query")
 button = st.button("Search")
-
-
-
 
 
 # Define a function to perform semantic search

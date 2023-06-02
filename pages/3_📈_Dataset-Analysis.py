@@ -1,7 +1,6 @@
 import streamlit as st
 
 
-
 st.set_page_config(
     page_title="Ask-Me",
     page_icon="📈",
@@ -16,15 +15,14 @@ with col1:
 
 with col2:
    st.header("How to use: ")
-   st.write("1. Insert the dataset")
-   st.write("2. Click on 'Analyze'.")
+   st.write("1. Enter the path of directory")
+   st.write("2. Click 'Enter'.")
 
 import os,glob
 import pandas as pd
 import shutil
 from PIL import Image
 from zipfile import ZipFile
-# import pandas_profiling as pp
 
 # Data Viz Pkgs
 import matplotlib
@@ -34,22 +32,7 @@ import seaborn as sns
 
 folder_path = st.text_input("Path of directory")
 def main(folder_path):
-	# """Common ML Data Explorer """
-	# st.title("Common ML Dataset Explorer")
-	# st.subheader("Simple DataScience App with Streamlit")
 
-	# html_temp = """
-	# <div style="background-color:tomato;"><p style="color:white;font-size:60px;"> Streamlit is Awesome</p></div>
-	# """
-	# st.markdown(html_temp,unsafe_allow_html=True)
-
-	# img_list = glob.glob("images/*.png")
-	# # st.write(img_list)
-	# # for i in img_list:
-	# # 	c_image = Image.open(i)
-	# # 	st.image(i)
-	# all_image = [Image.open(i) for i in img_list]
-	# st.image(all_image)
 	
 	def file_selector(folder_path):
 	    filenames = os.listdir(folder_path)
@@ -153,9 +136,7 @@ def main(folder_path):
 	all_columns_names = df.columns.tolist()
 	type_of_plot = st.selectbox("Select the Type of Plot",["area","bar","line","hist","box","kde"])
 	selected_column_names = st.multiselect('Select Columns To Plot',all_columns_names)
-	# plot_fig_height = st.number_input("Choose Fig Size For Height",10,50)
-	# plot_fig_width = st.number_input("Choose Fig Size For Width",10,50)
-	# plot_fig_size =(plot_fig_height,plot_fig_width)
+
 	cust_target = df.iloc[:,-1].name
 
 	if st.button("Generate Plot"):
@@ -202,27 +183,6 @@ def main(folder_path):
 		st.dataframe(all_target.head(10))
 
 
-	# Make Downloadable file as zip,since markdown strips to html
-	# st.markdown("""[google.com](iris.zip)""")
 
-	# st.markdown("""[google.com](./iris.zip)""")
-
-	# def make_zip(data):
-	# 	output_filename = '{}_archived'.format(data)
-	# 	return shutil.make_archive(output_filename,"zip",os.path.join("downloadfiles"))
-
-	# def makezipfile(data):
-	# 	output_filename = '{}_zipped.zip'.format(data)
-	# 	with ZipFile(output_filename,"w") as z:
-	# 		z.write(data)
-	# 	return output_filename	
-				
-
-	# if st.button("Download File"):
-	# 	DOWNLOAD_TPL = f'[{filename}]({makezipfile(filename)})'
-	# 	# st.text(DOWNLOAD_TPL)
-	# 	st.text(DOWNLOAD_TPL)
-	# 	st.markdown(DOWNLOAD_TPL)
-# folder_path = st.text_input("Path of directory")
 if folder_path:
     main(folder_path)
