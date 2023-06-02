@@ -85,7 +85,7 @@ with st.spinner("Finding intent..."):
                     #text = extract_text_from_pdf(pdf_file)
                     documents.append(text)
 
-        # Create a TF-IDF vectorizer to convert text into a matrix of TF-IDF features
+        # Create a TF-IDF vectorizer to convert text into a matrix of TF-IDF features 
         vectorizer = TfidfVectorizer(stop_words='english')
         tfidf_matrix = vectorizer.fit_transform(documents)
         # Apply LSA to reduce the dimensionality of the TF-IDF matrix
